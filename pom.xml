@@ -14,6 +14,8 @@
 		<module>cloud-eureka-server-7001</module>
 		<module>cloud-eureka-server-7002</module>
 		<module>cloud-payment-provider-8002</module>
+		<module>cloud-payment-provider-8004-zk</module>
+		<module>cloud-consumer-order-9001-zk</module>
 	</modules>
 
 	<!--统一管理jar包版本 -->
