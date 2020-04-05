@@ -1,0 +1,18 @@
+server:
+  port: 8006
+  servlet:    context-path: /payment-service
+
+spring:
+  application:    name: cloud-payment-provider
+  cloud:
+    consul:      host: localhost
+      port: 8500
+      discovery:        service-name: ${spring.application.name}
+        prefer-ip-address: true
+        health-check-url: http://${spring.cloud.client.ip-address}:${server.port}${server.servlet.context-path}/actuator/health  datasource:
+    username: root
+    password: 123456    url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding-utr-8&useSSL=false&serverTimezone=JST
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+
+    
